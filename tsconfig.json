@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "target": "ES6",
+        "preserveConstEnums": true,
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "outDir": "dist",
+        "rootDir": "src",
+        "sourceMap": true,
+        "baseUrl": "src",
+        "paths": {
+            "@middleware/*": [
+                "./middleware/*"
+            ],
+            "@defs/*": [
+                "./types/*"
+            ]
+        },
+        "typeRoots": [
+            "./node_modules/@types",
+            "./src/types",
+        ]
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "./node_modules",
+    ]
+}
