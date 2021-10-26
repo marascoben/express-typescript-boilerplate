@@ -1,4 +1,5 @@
 import 'module-alias/register';
+
 import express from 'express';
 import cors from 'cors';
 import { initialize } from 'express-openapi';
@@ -12,10 +13,12 @@ app.use(express.urlencoded());
 app.use(cors());
 
 const openapi = initialize({
-    apiDoc: apidoc,
-    app,
-    paths: './dist/routes',
-    routesGlob: '**/*.{ts,js}',
-    routesIndexFileRegExp: /(?:index)?\.[tj]s$/,
-    dependencies: {}
+	apiDoc: apidoc,
+	app,
+	paths: './dist/routes',
+	routesGlob: '**/*.{ts,js}',
+	routesIndexFileRegExp: /(?:index)?\.[tj]s$/,
+	dependencies: {},
 });
+
+process.on('SIGTERM', () => {});
