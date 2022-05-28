@@ -1,12 +1,16 @@
 const apidoc = {
-	swagger: '2.0',
+	openapi: '3.0.3',
 	info: {
 		title: 'Boilerplate',
 		description: '',
 		version: '1.0.0',
 	},
-	basePath: '/v1',
 	paths: {},
+	servers: [
+		{
+			url: '/v1',
+		}
+	]
 };
 
 export default apidoc;
